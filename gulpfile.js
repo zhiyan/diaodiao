@@ -28,7 +28,7 @@ gulp.task('styles', function () {
             style: 'expanded'
         }))
         .pipe(gulp.dest('app/css'));
-    gulp.src('app/css/**/*.css')
+    gulp.src('app/css/style.css')
         .pipe(gulp.dest('dist/css'))
         .pipe(csso())
         .pipe(gulp.dest('dist/css/min'));
