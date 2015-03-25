@@ -396,13 +396,7 @@ th {
   padding: 0;
 }
 
-.btn {
-  background: red;
-  padding: 10px 20px;
-}
-
 html, body, .main {
   width: 640px;
   height: 100%;
-  background: lightblue;
 }

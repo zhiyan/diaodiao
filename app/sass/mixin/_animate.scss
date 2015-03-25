@@ -1,0 +1,81 @@
+.ng-enter,
+.ng-leave
+{
+    position: absolute;
+    -webkit-transition: .5s all ease;
+       -moz-transition: .5s all ease;
+            transition: .5s all ease;
+}
+
+.ng-enter
+{
+    -webkit-animation: slideInRight .5s both ease;
+       -moz-animation: slideInRight .5s both ease;
+            animation: slideInRight .5s both ease;
+}
+
+.ng-leave
+{
+    -webkit-animation: slideOutLeft .5s both ease;
+       -moz-animation: slideOutLeft .5s both ease;
+            animation: slideOutLeft .5s both ease;
+}
+
+
+
+// key frames
+@keyframes slideOutLeft
+{
+    to
+    {
+        transform: translateX(-100%);
+    }
+}
+@-moz-keyframes slideOutLeft
+{
+    to
+    {
+        -moz-transform: translateX(-100%);
+    }
+}
+@-webkit-keyframes slideOutLeft
+{
+    to
+    {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes slideInRight
+{
+    from
+    {
+        transform: translateX(100%);
+    }
+    to
+    {
+        transform: translateX(0);
+    }
+}
+@-moz-keyframes slideInRight
+{
+    from
+    {
+        -moz-transform: translateX(100%);
+    }
+    to
+    {
+        -moz-transform: translateX(0);
+    }
+}
+@-webkit-keyframes slideInRight
+{
+    from
+    {
+        -webkit-transform: translateX(100%);
+    }
+    to
+    {
+        -webkit-transform: translateX(0);
+    }
+}

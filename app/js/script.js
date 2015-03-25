@@ -1,5 +1,5 @@
 // 初始化
-var app = angular.module('app',['ui.router']);
+var app = angular.module('app',['ui.router','ngAnimate']);
 
 // 底栏模板
 var templateBar = "";
@@ -10,28 +10,28 @@ app.config(["$stateProvider", function($stateProvider) {
     .state('home', {
       url: "",
       views: {
-        "main": { templateUrl: "page/home.html", controller:"homeController" },
+        "main": { templateUrl: "page-home.html", controller:"homeController" },
         "bar": { template: "" }
       }
     })
     .state('question', {
       url: "",
       views: {
-        "main": { templateUrl: "page/question.html", controller:"questionController" },
+        "main": { templateUrl: "page-question.html", controller:"questionController" },
         "bar": { template: templateBar }
       }
     })
     .state('report', {
       url: "",
       views: {
-        "main": { templateUrl: "page/report.html", controller:"reportController" },
+        "main": { templateUrl: "page-report.html", controller:"reportController" },
         "bar": { template: templateBar }
       }
     })
     .state('answer', {
       url: "",
       views: {
-        "main": { templateUrl: "page/answer.html", controller:"answerController" },
+        "main": { templateUrl: "page-answer.html", controller:"answerController" },
         "bar": { template: templateBar }
       }
     })

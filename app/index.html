@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script src="http://libs.useso.com/js/angular.js/1.2.9/angular.min.js"></script>
 <script src="js/angular-ui-router.js"></script>
+<script src="js/angular-animate.js"></script>
 <script src="js/Chart.min.js"></script>
 </head>
 <body>
@@ -20,6 +21,45 @@
 <section ui-view="main" class="main"></section>
 <section ui-view="bar"></section>
 
+<!-- template : home-->
+<script type="text/ng-template" id="page-home.html">
+	<div class="page-home">
+	<h1>home</h1>
+	<dl>
+		<dt>
+			<img src="">
+		</dt>
+		<dd>
+			文字
+		</dd>
+	</dl>
+	<a ui-sref="question" class="btn">开始</a>
+</div>
+</script>
+
+<!-- template : question-->
+<script type="text/ng-template" id="page-question.html">
+	<div class="page-question">
+		111222
+		<a ui-sref="home" class="btn">返回</a>
+	</div>
+</script>
+
+<!-- template : report-->
+<script type="text/ng-template" id="page-report.html">
+	<div class="page-chart">
+		<canvas id="chart"></canvas>
+	</div>
+</script>
+
+<!-- template : answer-->
+<script type="text/ng-template" id="page-answer.html">
+	<div class="page-answer">
+	
+	</div>
+</script>
+
+<!-- 业务逻辑脚本 -->
 <script src="js/script.js"></script>
 </body>
 </html>
