@@ -49,25 +49,25 @@ app.controller( "questionController", ["$scope", function($scope){
 
 // 结论
 app.controller( "reportController", ["$scope", function($scope){
-	 // var ctx = document.getElementById("chart").getContext("2d");
-  //   var data = {
-  //       labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
-  //       datasets: [
-  //           {
-  //               fillColor: "red",
-  //               strokeColor: "red",
-  //               data: [28, 48, 40, 19, 96, 27, 100]
-  //           }
-  //       ]
-  //   };
-  //   var options = {
-  //     responsive: true,
-  //     scaleShowLabels : false,
-  //     scaleShowLine : false,
-  //     angleShowLineOut : false,
-  //     pointDot : false,
-  //   };
-  //   var myRadarChart = new Chart(ctx).Radar(data, options);
+	 var ctx = document.getElementById("chart").getContext("2d");
+    var data = {
+        labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+        datasets: [
+            {
+                fillColor: "red",
+                strokeColor: "red",
+                data: [28, 48, 40, 19, 96, 27, 100]
+            }
+        ]
+    };
+    var options = {
+      responsive: true,
+      scaleShowLabels : false,
+      scaleShowLine : false,
+      angleShowLineOut : false,
+      pointDot : false,
+    };
+    var myRadarChart = new Chart(ctx).Radar(data, options);
 }]);
 
 // 好友的回答
