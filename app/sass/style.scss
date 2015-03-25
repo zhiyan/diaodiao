@@ -1,1 +1,18 @@
 @import "mixin/normalize.scss";
+@import "mixin/btn.scss";
+
+html,body,.main{
+	width: 640px;
+	height: 100%;
+	background:lightblue;
+}
+
+// page: home
+.page-home{
+
+}
+
+// page: question
+.page-question{
+
+}

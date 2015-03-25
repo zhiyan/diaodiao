@@ -396,4 +396,14 @@ th {
   padding: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
+.btn {
+  background: red;
+  padding: 10px 20px;
+  width: 640px;
+}
+
+html, body, .main {
+  width: 640px;
+  height: 100%;
+  background: lightblue;
+}

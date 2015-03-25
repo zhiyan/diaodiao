@@ -23,19 +23,18 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('styles', function () {
-    gulp.src(['app/sass/**/*.scss'])
+    gulp.src(['app/sass/style.scss'])
         .pipe(sass({
             style: 'expanded'
         }))
-        .pipe(gulp.dest('app/css'));
-    gulp.src('app/css/style.css')
+        .pipe(gulp.dest('app/css'))
         .pipe(gulp.dest('dist/css'))
         .pipe(csso())
         .pipe(gulp.dest('dist/css/min'));
 });
 
 gulp.task('pages', function () {
-    return gulp.src('app/*.html')
+    return gulp.src('app/**/*.html')
         .pipe(cleanhtml())
         .pipe(gulp.dest('dist'));
 });
@@ -53,8 +52,8 @@ gulp.task('watch', ['server'], function () {
     gulp.start('build');
 
     gulp.watch('app/sass/**/*.scss', ['styles']);
-     gulp.watch('app/js/**/*.js', ['scripts']);
-    gulp.watch('app/*.html', ['pages']);
+    gulp.watch('app/js/**/*.js', ['scripts']);
+    gulp.watch('app/**/*.html', ['pages']);
 
     var server = livereload();
     gulp.watch('dist/**').on('change', function (file) {
